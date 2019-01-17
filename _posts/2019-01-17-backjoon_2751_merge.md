@@ -60,7 +60,7 @@ void merge(int left, int mid, int right)
     j = mid+1;  //2번째 리스트 0
     k = left;  //sorted 배열 index
 
-    /* sorted 배열로 저장 */
+    // sorted 배열로 저장
     while(1){
         if(num[i]<= num[j]) sorted[k++] = num[i++];
         else sorted[k++] = num[j++];
@@ -76,11 +76,10 @@ void merge(int left, int mid, int right)
         }
     }
 
-    /* sorted 배열에 저장한 값 다시 num 배열로 저장 */
+    /* sorted 배열에 저장한 값 다시 num 배열로 저장*/
     for(i=left; i<right+1; i++)
         num[i] = sorted[i];
 }
-
 ```
 
 3. 전체코드
@@ -101,7 +100,7 @@ int main(int argc, char * argv[])
 {
     scanf("%d", &N);
 
-    /* merge sort */
+    /* merge sort*/
      for(int i=0; i<N; i++){
      scanf("%d", &num[i]);
      }
@@ -122,7 +121,7 @@ void swap(int* a, int* b)
 }
 
 
-/* conquer & merge */
+/* conquer & merge*/
 void merge(int left, int mid, int right)
 {
     int i,j,k;
@@ -130,7 +129,7 @@ void merge(int left, int mid, int right)
     j = mid+1;  //2번째 리스트 0
     k = left;  //sorted 배열 index
 
-    /* sorted 배열로 저장 */
+    /* sorted 배열로 저장*/
     while(1){
         if(num[i]<= num[j]) sorted[k++] = num[i++];
         else sorted[k++] = num[j++];
@@ -146,12 +145,12 @@ void merge(int left, int mid, int right)
         }
     }
 
-    /* sorted 배열에 저장한 값 다시 num 배열로 저장 */
+    /* sorted 배열에 저장한 값 다시 num 배열로 저장*/
     for(i=left; i<right+1; i++)
         num[i] = sorted[i];
 }
 
-/* divide 과정 */
+/* divide 과정*/
 void Merge_sort(int left, int right)
 {
     int mid;
@@ -165,4 +164,4 @@ void Merge_sort(int left, int right)
 
 ```
 
-문제 : [https://www.acmicpc.net/problem/6064](https://www.acmicpc.net/problem/6064)
+문제 : [https://www.acmicpc.net/problem/2751](hhttps://www.acmicpc.net/problem/2751)
