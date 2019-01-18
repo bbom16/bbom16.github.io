@@ -16,7 +16,9 @@ N개의 수가 주어졌을 때, 이를 오름차순으로 정렬하는 프로�
 
 ### 3. 문제 해결
 **Merge sort**를 이용하여 해결한다.
+
 #### **알고리즘**
+
 | 0 | 1 | 2 | 3 | 4 |
 |---:|---:||---:|---:||---:|
 | 5 | 4 | 3 | 2 | 1 |
@@ -161,7 +163,6 @@ void Merge_sort(int left, int right)
         merge(left, mid, right);
     }
 }
-
 ```
+문제 : [https://www.acmicpc.net/problem/2751](https://www.acmicpc.net/problem/2751)
 
-문제 : [https://www.acmicpc.net/problem/2751](hhttps://www.acmicpc.net/problem/2751)
