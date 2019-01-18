@@ -37,7 +37,8 @@ N개의 수가 주어졌을 때, 이를 오름차순으로 정렬하는 프로�
 
 #### **알고리즘 구현**
 1. divide 과정
-  - 재귀를 이용하여 index를 반으로 쪼개가며 2개의 배열로 나눠줬다.
+
+- 재귀를 이용하여 index를 반으로 쪼개가며 2개의 배열로 나눠줬다.
 
 ```c
 void Merge_sort(int left, int right)
@@ -52,7 +53,8 @@ void Merge_sort(int left, int right)
 }
 ```
 2. conquer & merge 단계
-  - 두 배열의 첫 인덱스들을 비교하여 더 작은 값을 sorted 배열에 넣어주면서 두 배열의 비교를 반복해서 정렬했다.
+
+- 두 배열의 첫 인덱스들을 비교하여 더 작은 값을 sorted 배열에 넣어주면서 두 배열의 비교를 반복해서 정렬했다.
 
 ```c
 void merge(int left, int mid, int right)
