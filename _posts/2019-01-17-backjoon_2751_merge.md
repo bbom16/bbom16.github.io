@@ -16,13 +16,14 @@ N개의 수가 주어졌을 때, 이를 오름차순으로 정렬하는 프로�
 
 ### 3. 문제 해결
 **Merge sort**를 이용하여 해결한다.
-
 #### **알고리즘**
 
-| 0 | 1 | 2 | 3 | 4 |
-|---:|---:||---:|---:||---:|
-| 5 | 4 | 3 | 2 | 1 |
+|  0   |  1   |  2   |  3   |  4   |
+| :--: | :--: | :--: | :--: | :--: |
+|  5   |  4   |  3   |  2   |  1   |
+
 위와 같은 배열을 내림차순으로 정렬한다고 가정한다.  
+
 - divide 과정 : 처음엔 2개의 배열로 나누는 과정을 거친다. index를 반으로 쪼개면서 본다.  
   - 1 단계 : 5 4 3 과 2 1
   - 2 단계 : 5 4 / 3 / 2 1
@@ -36,9 +37,9 @@ N개의 수가 주어졌을 때, 이를 오름차순으로 정렬하는 프로�
   -> 두 배열의 처음 index인 1과 3을 비교한다. 둘 중 더 작은 1이 sorted에 들어가고, 그 다음 2와 3을 비교한다. 더 작은 2가 sorted에 들어간다. 이런 식으로 배열을 정렬하게 된다.
 
 #### **알고리즘 구현**
-1. divide 과정
 
-- 재귀를 이용하여 index를 반으로 쪼개가며 2개의 배열로 나눠줬다.
+- divide 과정
+  - 재귀를 이용하여 index를 반으로 쪼개가며 2개의 배열로 나눠줬다.
 
 ```c
 void Merge_sort(int left, int right)
@@ -52,9 +53,8 @@ void Merge_sort(int left, int right)
     }
 }
 ```
-2. conquer & merge 단계
-
-- 두 배열의 첫 인덱스들을 비교하여 더 작은 값을 sorted 배열에 넣어주면서 두 배열의 비교를 반복해서 정렬했다.
+- conquer & merge 단계
+  - 두 배열의 첫 인덱스들을 비교하여 더 작은 값을 sorted 배열에 넣어주면서 두 배열의 비교를 반복해서 정렬했다.
 
 ```c
 void merge(int left, int mid, int right)
@@ -86,7 +86,7 @@ void merge(int left, int mid, int right)
 }
 ```
 
-3. 전체코드
+- 전체코드
 
 ```c
 #include <stdio.h>
@@ -166,5 +166,5 @@ void Merge_sort(int left, int right)
     }
 }
 ```
-문제 : [https://www.acmicpc.net/problem/2751](https://www.acmicpc.net/problem/2751)
 
+문제 : [https://www.acmicpc.net/problem/2751](https://www.acmicpc.net/problem/2751)
