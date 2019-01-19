@@ -3,7 +3,6 @@ layout: post
 title: "알고리즘 문제풀이 - 백준 2751(merge sort를 이용하여 구현)"
 tags: [알고리즘, 백준]
 comments: true
-
 ---
 
 # **백준 2751 < 수 정렬하기2 >**
