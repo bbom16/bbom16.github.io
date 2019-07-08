@@ -1,9 +1,9 @@
-```
+---
 layout: post
 title: "부스트코스-예약페이지 만들기2(0613)"
 tags: [spring, java]
 comments: true
-```
+---
 
 ###java에서 int와 Integer 차이
 
