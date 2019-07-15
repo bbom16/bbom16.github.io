@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "부스트코스-예약페이지 만들기1(0530)"
+title: "부스트코스-예약페이지 만들기(0530)"
 tags: [spring, java]
 comments: true
 ---
