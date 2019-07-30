@@ -9,9 +9,7 @@ comments: true
 
 # PJT4 강의 내용 정리
 
-###**1. 객체지향 JavaScript구현 - FE**
-
-
+###1. 객체지향 JavaScript구현 - FE
 
 ####1)  배열의 함수형 메소드
 
@@ -126,7 +124,7 @@ handlebar(라이브러리)를 이용하여 templating 작업을 한다.
 
 - 조건도 가능
 
-  ```html
+  ```
   {{#if hobby}}
   	<div> 내 취미는 {{hobby}}  </div>
   {{else}} 
@@ -138,7 +136,7 @@ handlebar(라이브러리)를 이용하여 templating 작업을 한다.
 
   html
 
-  ```html
+  ```
   {{#hobies hobby}}
   	{{hobby}}
   {{/hobbies}}
