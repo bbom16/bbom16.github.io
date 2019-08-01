@@ -9,9 +9,11 @@ comments: true
 
 # PJT4 강의 내용 정리
 
-###1. 객체지향 JavaScript구현 - FE
+### 1. 객체지향 JavaScript구현 - FE
 
-####1)  배열의 함수형 메소드
+
+
+#### 1)  배열의 함수형 메소드
 
 - forEach
 
@@ -102,7 +104,7 @@ jQuery js라이브러리로 대부분 많이 사용됨
 
 
 
-####2) handlebar를 활용한 템플릿 작업
+#### 2) handlebar를 활용한 템플릿 작업
 
 handlebar(라이브러리)를 이용하여 templating 작업을 한다.
 
@@ -124,7 +126,7 @@ handlebar(라이브러리)를 이용하여 templating 작업을 한다.
 
 - 조건도 가능
 
-  ```
+  ```javascript
   {{#if hobby}}
   	<div> 내 취미는 {{hobby}}  </div>
   {{else}} 
@@ -136,7 +138,7 @@ handlebar(라이브러리)를 이용하여 templating 작업을 한다.
 
   html
 
-  ```
+  ```javascript
   {{#hobies hobby}}
   	{{hobby}}
   {{/hobbies}}
