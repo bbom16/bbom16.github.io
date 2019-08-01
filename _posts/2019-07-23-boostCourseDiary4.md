@@ -116,7 +116,7 @@ handlebar(라이브러리)를 이용하여 templating 작업을 한다.
 
 - 배열일 경우
 
-  ```html
+  ```handlebars
   {{#each name}}
    <div> {{@index}}번째 : {{this}} </div>
   {{/each}}
@@ -126,7 +126,7 @@ handlebar(라이브러리)를 이용하여 templating 작업을 한다.
 
 - 조건도 가능
 
-  ```javascript
+  ```handlebars
   {{#if hobby}}
   	<div> 내 취미는 {{hobby}}  </div>
   {{else}} 
@@ -138,7 +138,7 @@ handlebar(라이브러리)를 이용하여 templating 작업을 한다.
 
   html
 
-  ```javascript
+  ```handlebars
   {{#hobies hobby}}
   	{{hobby}}
   {{/hobbies}}
