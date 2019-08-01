@@ -37,8 +37,10 @@ comments: true
 
   
 
-  2. **get방식으로 받은 parameter값을 어떻게 하면 javascript에서 쓸 수 있을까**
+  
 
+  2. **get방식으로 받은 parameter값을 어떻게 하면 javascript에서 쓸 수 있을까**
+  
   - **해결책**
     - 구글 검색을 통해 코드를 검색함
     
@@ -61,34 +63,37 @@ comments: true
       - 참고 
         - 인코딩 이유 :  <https://www.hooni.net/xe/study/2195>
         - URI 인코딩 함수들의 차이 : <http://blog.kazikai.net/?p=194>
-
-
-
-3. **소수점이 한 자리까지 나오게 하는 방법?**
-
-   - **해결책**
-
-     - toFixed(소수점 자릿수) 으로 사용
-
-     - 나머지 자릿수는 반올림
-
-       ```javascript
-       avgScore.toFixed(1);
-       ```
-
-     - 참고 : <https://squll1.tistory.com/entry/javascript-소수점-자리수-지정자르기>
-
-       
-
-4. **a 태그를 눌렀을 때, 화면이 상단으로 움직이는 것을 방지하려면?**
-
-   - **해결책**
-
-     - href = javascirpt:를 사용한다.
-
-       ```javascript
-       <a href="javascript:" class="bk_more _open">
-       ```
-
-     - 참고 : <https://blog.hanumoka.net/2018/08/23/html-20180823-html-a-tag-no-action/>
+  
+  
+  
+  
+  
+  3. **소수점이 한 자리까지 나오게 하는 방법?**
+  
+  - **해결책**
+    - toFixed(소수점 자릿수) 으로 사용
+  
+    - 나머지 자릿수는 반올림
+  
+      ```javascript
+      avgScore.toFixed(1);
+      ```
+  
+    - 참고 : <https://squll1.tistory.com/entry/javascript-소수점-자리수-지정자르기>
+  
+  
+  
+  
+  
+  4. a 태그를 눌렀을 때, 화면이 상단으로 움직이는 것을 방지하려면?
+  
+  - **해결책**
+  
+    - href = javascirpt:를 사용한다.
+  
+    ```javascript
+    <a href="javascript:" class="bk_more _open">
+    ```
+  
+    - 참고 : <https://blog.hanumoka.net/2018/08/23/html-20180823-html-a-tag-no-action/>
 
