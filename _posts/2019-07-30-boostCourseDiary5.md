@@ -41,10 +41,26 @@ comments: true
 
   - **해결책**
     - 구글 검색을 통해 코드를 검색함
+    
     - js에 slice와 split을 이용해서 함수를 이용해서 구현
+    
     - slice(start, cnt) : start 인덱스에서 cnt개 만큼 부분 배열을 만들어 반환해준다.
+    
     - split(char) : char를 기준으로 문자열을 나눠 배열을 반환해준다.
+    
     - 코드 출처 : <https://kdarkdev.tistory.com/116>
+    
+      ⁺ 추가
+    
+      - decodeURIComponent , decodeURI, unescape (encodeURIComponent, encoudeURI, escape) 차이
+        - 모두 URI를 인코딩/디코딩 할 때 사용하는 javascript function.
+        - 인코딩을 사용하는 이유는 get방식 통신, ajax 통신 등에서 사용할 수 없는 특수문자들이나 한글 깨짐 문제들을 해결하기 위함.
+      - unescape(escape)은 deprecated (점점 사용되어지지 않을) 함수이기 때문에 지양하라고 나옴.
+      - decodeURI(encodeURI)는 보통 URI(path) 를 인코딩/디코딩할 때 사용하라고 함.
+      - decodeURIComponent(encodeURIComponent)는 URI 파라미터를 인코딩/디코딩할 때 사용하라고 나와있음
+      - 참고 
+        - 인코딩 이유 :  <https://www.hooni.net/xe/study/2195>
+        - URI 인코딩 함수들의 차이 : <http://blog.kazikai.net/?p=194>
 
 
 
