@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "부스트코스-pjt5 강의 정리 - PJT5-3"
+title: "부스트코스-pjt5 강의 정리 - PJT5-3 : form 데이터"
 tags: [부스트코스, 웹, javascript]
 comments: true
 ---
@@ -45,12 +45,7 @@ comments: true
   var bValid = (/^[\w+_]\w+@\w+\.\w+$/).test(emailValue);
   ```
 
-  
 
-  
 
-   
+자세한 내용은 [부스트코스](https://www.edwith.org/boostcourse-web/lecture/22959/) 를 참고 하세요 :-)
 
-  
-
-  

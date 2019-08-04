@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "부스트코스-pjt5 강의 정리 - PJT5-2"
+title: "부스트코스-pjt5 강의 정리 - PJT5-2 : 정규표현식"
 tags: [부스트코스, 웹, javascript]
 comments: true
 ---
@@ -153,6 +153,8 @@ comments: true
   ```
 
   
+
+  자세한 내용은 [부스트코스](https://www.edwith.org/boostcourse-web/lecture/16796/) 를 참고 하세요 :-)
 
   
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "부스트코스-pjt5 강의 정리 - PJT5-1"
+title: "부스트코스-pjt5 강의 정리 - PJT5-1 : javascript 객체
 tags: [부스트코스, 웹, javascript]
 comments: true
 ---
