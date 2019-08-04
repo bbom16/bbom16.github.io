@@ -9,7 +9,11 @@ comments: true
 
 ### **4. 상태유지기술(Cookie & Session) - BE**
 
-</br>
+
+
+
+
+
 
 #### 전체적인 흐름 정리
 
@@ -45,7 +49,11 @@ Http 는 상태유지가 되지 않는 프로토콜이다.
 
   쿠키를 서버가 받아 다시 검사해서 유지 해야하는 지 여부 확인 
 
-#### 
+
+
+
+
+ 
 
 - 세션 동작 과정
 
@@ -56,6 +64,8 @@ Http 는 상태유지가 되지 않는 프로토콜이다.
   세션키를 담은 쿠키 생성해서 이 쿠키를 클라이언트한테 보냄
 
   클라이언트를 요청할 때마다 세션키 쿠키를 보내고 서버는 받아서 세션키를 이용해 이전에 생성한 저장소를 활용함 (이 때 httpSession을 사용)
+
+
 
 
 
@@ -71,7 +81,11 @@ Http 는 상태유지가 되지 않는 프로토콜이다.
 
      클라이언트에서 생성하고 저장될 수도 있고, 서버단에서 전송한 쿠키가 클라이언트에 저장될 수도 있음
 
-     ##### 
+   
+
+   
+
+   
 
    - 이용 방법 
 
@@ -81,7 +95,11 @@ Http 는 상태유지가 되지 않는 프로토콜이다.
 
      쿠키는 이름/값 이외에도 주석, 경로, 유효기간, 버전, 도메인과 같은 정보도 저장함
 
-     ##### 
+   
+
+   
+
+   
 
    - 쿠키는 수와 크기에 제한적
 
@@ -92,23 +110,32 @@ Http 는 상태유지가 되지 않는 프로토콜이다.
      모든 웹 사이트를 합쳐 최대 300개만 허용
 
      클라이언트 당 쿠키의 최대 용량은 12MB 정도
+   
+   
+   
 
-     ##### 
+   
+
+   
 
    - 실제 사용하는 방법 
 
      서버에서 쿠키 생성, Response의 addCookie 메소드를 이용해 클라이언트에게 전송 
 
      ```java
-     Cookie cookie = nnew Cookie(이름, 값);
+  Cookie cookie = nnew Cookie(이름, 값);
      response.addCookie(cookie);
-     ```
-
-     웹 클라이언트로 전송 
-
+  ```
+   
+  웹 클라이언트로 전송 
+   
      웹 클라이언트는 서버에게 쿠키를 받으면 쿠키를 서버별로 저장함
+   
+   
 
-     ##### 
+   
+
+   
 
    - 쿠키의 이름은 알파벳과 숫자로만 구성됨
 
@@ -119,32 +146,38 @@ Http 는 상태유지가 되지 않는 프로토콜이다.
       웹 클라이언트는 서버에게 다시 요청을 보낼 때 자동으로 쿠키를 같이 보냄 
 
      ```java
-     //HttpServletRequest가 갖고 있는 getCookies를 이용해 쿠키를 가져옴
+  //HttpServletRequest가 갖고 있는 getCookies를 이용해 쿠키를 가져옴
      Cookie[] cookies = request.getCookies();
-     ```
-
-     웹 클라이언트가 보낸 쿠키를 받아옴
-
+  ```
+   
+  웹 클라이언트가 보낸 쿠키를 받아옴
+   
      쿠키가 하나가 아니라 여러 개 일 수 있음
-
+   
      **주의!** 쿠키값이 없으면 null return 하기 때문 null 예외처리 필요
-
-     ##### 
-
-   - 서버는 쿠키를 삭제하는 명령이 없음
-
-     삭제는 클라이언트에서! 
-
-     서버에서 할 수 있는 방법은 삭제하고 싶은 쿠키와 이름이 같은 쿠키를 생성해 maxAge를 0으로 바꿔 전송한다.
-
+   
+  
+   
+  
+   
+  
+   
+   
+   
+- 서버는 쿠키를 삭제하는 명령이 없음
+   
+  삭제는 클라이언트에서! 
+   
+  서버에서 할 수 있는 방법은 삭제하고 싶은 쿠키와 이름이 같은 쿠키를 생성해 maxAge를 0으로 바꿔 전송한다.
+   
      클라이언트 쪽에서 같은 이름의 쿠키를 가질 수 없기 때문에 같은 이름의 쿠키가 들어오면 쿠키를 교체함
-
+   
      유지시간이 0이라서 해당 쿠키는 사라짐
-
+   
      ```java
-     Cookie cookie = new Cookie("이름", null);
+  Cookie cookie = new Cookie("이름", null);
      cookie.setMaxAge(0);
-     response.addCookie(cookie);
+  response.addCookie(cookie);
      ```
 
      - setMaxAge()
@@ -154,37 +187,42 @@ Http 는 상태유지가 되지 않는 프로토콜이다.
        인자는 초 단위의 정수형 
 
        음수로 지정하면 브라우저가 종료될 때 쿠키가 삭제 
+  
+     
+   
+   - 쿠키 관련 메소드(javax.servlet.http.Cookie)
+   
+     | 반환형 | 메소드 이름               | 메소드 기능                 |
+  | ------ | ------------------------- | --------------------------- |
+     | int    | getMaxAge()               | 쿠키의 유효기간을 알아냄    |
+  | String | getName()                 | 쿠키의 이름을 스트링을 반환 |
+     | String | getValue()                | 쿠키의 값을 스트링으로 변환 |
+  | void   | setValue(String newValue) | 쿠키의 새로운 값을 설정     |
+   
 
    
 
-   - 쿠키 관련 메소드(javax.servlet.http.Cookie)
-
-     | 반환형 | 메소드 이름               | 메소드 기능                 |
-     | ------ | ------------------------- | --------------------------- |
-     | int    | getMaxAge()               | 쿠키의 유효기간을 알아냄    |
-     | String | getName()                 | 쿠키의 이름을 스트링을 반환 |
-     | String | getValue()                | 쿠키의 값을 스트링으로 변환 |
-     | void   | setValue(String newValue) | 쿠키의 새로운 값을 설정     |
-
-     
+   
 
    - spring MVC에서 cookie 사용
 
      1. @CookieValue 사용
-
+   
         컨트롤러 파라미터에서 annotation을 사용하면 컨트롤러에서 쉽게 읽어드릴 수 있음
-
+   
      2. HttpServletRequst, HttpServletResponse를 이용
-
+   
         컨트롤러 파라미터에서 request를 받아 쿠키를 받고 생성해서 클라이언트에게 보내줌
-
+   
         ```java
-        public String list(@RequestParam(name="start", required=false, defaultValue="0") int start, ModelMap model, HttpServletRequest request, HttpServletResponse response){
-          
+        public String list(@RequestParam(name="start", required=false, defaultValue="0") int start, ModelMap model, 
+        HttpServletRequest request, HttpServletResponse response){
         }
         ```
+   
 
-        
+
+
 
 
 2. Session을 이용한 방법
@@ -211,7 +249,11 @@ Http 는 상태유지가 되지 않는 프로토콜이다.
 
      -> 이 세션id에 해당하는 저장소를 찾아 클라이언트만의 정보를 유지해서 사용할 수 있게 해줌
 
-     ##### 
+   
+
+   
+
+   
 
    - HttpSession
 
@@ -231,7 +273,11 @@ Http 는 상태유지가 되지 않는 프로토콜이다.
      HttpSession session = request.getSession(false);
      ```
 
-     ##### 
+   
+
+   
+
+   
 
    - setAttribute(String name, Object value)
 
@@ -253,7 +299,11 @@ Http 는 상태유지가 되지 않는 프로토콜이다.
 
      모든 세션 정보 삭제
 
-     ##### 
+   
+
+   
+
+   
 
    - 세션 관련 메소드(javax.servlet.http.HttpSession)
 
@@ -264,7 +314,9 @@ Http 는 상태유지가 되지 않는 프로토콜이다.
      | int    | getMaxInactiveInterval()             | 세션 유지시간을 구하는 함수 <br />설정하지않으면 기본값은 1800초(30분) |
      | void   | setMaxInactiveInterval(int interval) | 세션 유지시간을 초 단위로 설정                               |
 
-       
+   
+
+   
 
    - 세션 유지 시간
 
@@ -284,7 +336,11 @@ Http 는 상태유지가 되지 않는 프로토콜이다.
      </session-config>
      ```
 
-   
+
+
+
+
+
 
 - 자세한 내용은 [부스트코스](https://www.edwith.org/boostcourse-web/lecture/16798/) 를 참고 하세요 :-)
 
