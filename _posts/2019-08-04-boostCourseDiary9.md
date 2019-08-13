@@ -123,19 +123,15 @@ Http 는 상태유지가 되지 않는 프로토콜이다.
      서버에서 쿠키 생성, Response의 addCookie 메소드를 이용해 클라이언트에게 전송 
 
      ```java
-  Cookie cookie = nnew Cookie(이름, 값);
+    Cookie cookie = nnew Cookie(이름, 값);
      response.addCookie(cookie);
-  ```
-   
+     ```
+
+
   웹 클라이언트로 전송 
-   
-     웹 클라이언트는 서버에게 쿠키를 받으면 쿠키를 서버별로 저장함
-   
-   
 
-   
+ 웹 클라이언트는 서버에게 쿠키를 받으면 쿠키를 서버별로 저장함
 
-   
 
    - 쿠키의 이름은 알파벳과 숫자로만 구성됨
 
@@ -148,32 +144,33 @@ Http 는 상태유지가 되지 않는 프로토콜이다.
      ```java
   //HttpServletRequest가 갖고 있는 getCookies를 이용해 쿠키를 가져옴
      Cookie[] cookies = request.getCookies();
-  ```
-   
+     ```
+
   웹 클라이언트가 보낸 쿠키를 받아옴
-   
-     쿠키가 하나가 아니라 여러 개 일 수 있음
-   
-     **주의!** 쿠키값이 없으면 null return 하기 때문 null 예외처리 필요
-   
+
+ 쿠키가 하나가 아니라 여러 개 일 수 있음
+
+ **주의!** 쿠키값이 없으면 null return 하기 때문 null 예외처리 필요
+
   
+
    
-  
+
    
-  
+
    
-   
-   
+
+
 - 서버는 쿠키를 삭제하는 명령이 없음
-   
+  
   삭제는 클라이언트에서! 
-   
+  
   서버에서 할 수 있는 방법은 삭제하고 싶은 쿠키와 이름이 같은 쿠키를 생성해 maxAge를 0으로 바꿔 전송한다.
-   
+  
      클라이언트 쪽에서 같은 이름의 쿠키를 가질 수 없기 때문에 같은 이름의 쿠키가 들어오면 쿠키를 교체함
-   
+  
      유지시간이 0이라서 해당 쿠키는 사라짐
-   
+  
      ```java
   Cookie cookie = new Cookie("이름", null);
      cookie.setMaxAge(0);
@@ -189,37 +186,37 @@ Http 는 상태유지가 되지 않는 프로토콜이다.
        음수로 지정하면 브라우저가 종료될 때 쿠키가 삭제 
   
      
-   
+  
    - 쿠키 관련 메소드(javax.servlet.http.Cookie)
-   
+  
      | 반환형 | 메소드 이름               | 메소드 기능                 |
   | ------ | ------------------------- | --------------------------- |
      | int    | getMaxAge()               | 쿠키의 유효기간을 알아냄    |
   | String | getName()                 | 쿠키의 이름을 스트링을 반환 |
      | String | getValue()                | 쿠키의 값을 스트링으로 변환 |
   | void   | setValue(String newValue) | 쿠키의 새로운 값을 설정     |
-   
+  
 
-   
+  
 
-   
+  
 
    - spring MVC에서 cookie 사용
 
      1. @CookieValue 사용
-   
+  
         컨트롤러 파라미터에서 annotation을 사용하면 컨트롤러에서 쉽게 읽어드릴 수 있음
-   
+  
      2. HttpServletRequst, HttpServletResponse를 이용
-   
+  
         컨트롤러 파라미터에서 request를 받아 쿠키를 받고 생성해서 클라이언트에게 보내줌
-   
+  
         ```java
         public String list(@RequestParam(name="start", required=false, defaultValue="0") int start, ModelMap model, 
         HttpServletRequest request, HttpServletResponse response){
         }
         ```
-   
+  
 
 
 
@@ -233,7 +230,9 @@ Http 는 상태유지가 되지 않는 프로토콜이다.
 
      로그인 정보, 장바구니 정보 등 클라이언트 별로 저장되어야하는 정보가 있는 경우 사용
 
-     ##### 
+   
+
+     
 
    - 이용 방법
 

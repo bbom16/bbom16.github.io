@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "한이음 - 미세먼지 정보 어플(0715)"
+title: "한이음 - 미세먼지 정보 어플(0715) : intelliJ spring 시작하기 & db 생성"
 tags: [spring, java, 한이음 ]
 comments: true
 ---

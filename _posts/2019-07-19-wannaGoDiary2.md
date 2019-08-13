@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "한이음 - 미세먼지 정보 어플(0719 - 0722)"
-tags: [spring, java, 한이음]
+title: "한이음 - 미세먼지 정보 어플(0719 - 0722) : list방식을 서버에서 받는 방법 & 가장 가까운 위치 찾기(mysql)"
+tags: [spring, java, 한이음, mysql]
 comments: true
 ---
 
