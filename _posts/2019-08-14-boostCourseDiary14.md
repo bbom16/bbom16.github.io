@@ -9,7 +9,9 @@ comments: true
 
 ### 1. 파일 업로드
 
-####1) file upload의 이해
+#### 1) file upload의 이해
+
+
 
 ```html
 <input type="file" name="reviewImg" id="reviewImg" accept="image/*">

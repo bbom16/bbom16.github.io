@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "한이음 - 미세먼지 정보 어플 : RDS 생성후 서버에 연결하기 + 문제
+title: "한이음 - 미세먼지 정보 어플 : RDS 생성후 서버에 연결하기 + 문제"
 tags: [spring, java, 한이음]
 comments: true
 ---
