@@ -161,7 +161,7 @@ jstl은 if만 있고, else if나 else는 따로 없다. 그래서 if-else로 사
 
 
 
-### JavaScriptd에서 날짜 비교
+### JavaScript에서 날짜 비교
 
 숫자 비교와 마찬가지로 > , < , ==, === 연산자를 이용하여 비교해주면 된다.
 

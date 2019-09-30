@@ -76,12 +76,12 @@ INNER JOIN (
 
 그 후 측정소 정보가 전부 나오지 않는 문제가 나타났다. 이유는 시간대 안에 측정 정보가 없는 경우 그 측정소 정보가 자체가 안나오기 때문이었다. 이 문제를 해결하기 위해서 inner join 대신 outer join 을 사용했다.
 
-outer join은 left outer join, right outer join, full outer join, 
+outer join은 left outer join, right outer join, full outer join 등이 있다. 성능 문제로 full outer join은 거의 사용하지 않고, 주로 **left outer join**이 많이 사용된다고 한다.
 
-```mysql
+```sql
 select m.id, m.name, m.x_location_info, m.y_location_info, max_time, r.dust
 from measurementStation m
-Left OUTER JOIN (
+LEFT OUTER JOIN (
 	select max_time, d.dust, d.measurement_id
 	from dustInfo d, 
 	(

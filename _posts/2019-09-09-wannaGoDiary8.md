@@ -79,7 +79,6 @@ comments: true
 #### 소스코드 분석
 
 ```java
-@PropertySource("classpath:fcmSetting.properties")
 public class PushService {
     @Value("${fcm.local.path}")
     String path;
@@ -160,7 +159,7 @@ public class PushService {
 
 push는 현재 측정한 데이터가 내가 설정해놓은 미세먼지 수치보다 농도가 심할 때 사용자에게 알려주는 방식으로 진행된다. 그렇기 때문에 측정한 데이터와 사용자 설정 데이터를 비교하는 작업이 필요하다. 나는 미세먼지 테이블과 사용자 테이블의 조인을 통해서 쿼리문을 작성하였다.
 
-```mysql
+```sql
 SELECT 
     u.id,
     usr_token,
